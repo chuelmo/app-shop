@@ -19,6 +19,11 @@
                         <h3 class="title">{{ $product->name }}</h3>
                         <h6>{{ $product->category->name }}</h6>
                     </div>
+                    @if (session('notification'))
+                        <div class="alert alert-success">
+                            {{ session('notification') }}
+                        </div>
+                    @endif
                 </div>
             </div>
             <div class="description text-center">
